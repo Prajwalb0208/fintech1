@@ -29,16 +29,6 @@ const tipsData = [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         icon: assets['bitcoin'],
     },
-    {
-        title: 'Real-Estate is up 20%',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        icon: assets['realestate'],
-    },
-    {
-        title: 'Gold is up 20%',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        icon: assets['gold'],
-    },
 ];
 
 const StocksAndTips = () => {
@@ -69,7 +59,7 @@ const StocksAndTips = () => {
                             <span>{stock.name}</span>
                             <span/>
                             <span/>
-                            <span>{stock.price}</span>
+                            <span className='price'>{stock.price}</span>
                             <span className="change">{stock.change}</span>
                         </li>
                     ))}
@@ -86,7 +76,7 @@ const StocksAndTips = () => {
                             <span>{option.name}</span>
                             <span/>
                             <span/>
-                            <span>{option.price}</span>
+                            <span className='price'>{option.price}</span>
                             <span className="change">{option.change}</span>
                         </li>
                     ))}
@@ -95,7 +85,7 @@ const StocksAndTips = () => {
             <div className="container-right">
                 <h3 className="tips-header">Tips</h3>
                 <div className="carousel">
-                    <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                    <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 101}%)` }}>
                         {tipsData.map((tip, index) => (
                             <div key={index} className="carousel-item">
                                 <div>

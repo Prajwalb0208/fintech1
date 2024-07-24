@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 2fr 2fr 1.5fr; /* Adjust column proportions to fit the image */
+    grid-template-columns: repeat(3, 1fr); /* Ensure equal column widths */
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -8,19 +8,22 @@
     align-items: start;
 }
 
-.container-left, .container-center {
+.container-left, .container-center, .container-right {
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Ensure containers fill the grid cell */
+    display: flex;
+    flex-direction: column;
 }
 
 .container-right {
+    /* Remove specific width setting to ensure equal sizing */
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
 }
 
 .tips-header {
@@ -29,21 +32,22 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
     z-index: 1;
+    position: relative;
+    background: none;
 }
 
 .carousel {
-    position: relative;
+    flex: 1; /* Ensure it grows to fill the available space */
     overflow: hidden;
     background-color: #f5f5f5;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    height: 60vh; /* Ensure the carousel takes full height of container-right */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    position: relative;
 }
 
 .carousel-inner {
@@ -54,24 +58,27 @@
 }
 
 .carousel-item {
+    flex: 0 0 0 0 100%;
     min-width: 100%;
     box-sizing: border-box;
-    padding: 10px;
-    gap: 20px;
-    display: block;
-    block-size: auto;
-    align-items: center;
+    padding: 20px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item img {
     width: 50px;
     height: 50px;
     object-fit: cover;
+    margin-left: 10px;
 }
 
 .carousel-controls {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
@@ -81,23 +88,24 @@
     border: none;
     padding: 10px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    flex: 1;
     gap: 10px;
 }
 
 .carousel-indicators button {
     background-color: #007bff;
     border: none;
-    width: 30px;
-    height: 4px;
+    width: 25px !important;
+    height: 3px !important;    
     border-radius: 10%;
-    /* margin: 0 5px; */
     cursor: pointer;
+    padding: 0;
+    margin: 0;
 }
 
 .carousel-indicators .active {
@@ -112,7 +120,7 @@
 }
 
 .buy-new-button {
-    background-color: #eaf4fe;
+    background-color: #f8f9fa;
     color: #3f4f9a;
     border: none;
     padding: 10px 15px;
@@ -137,4 +145,14 @@
 .change {
     color: green;
     font-weight: bold;
+}
+
+.price {
+    background-color: #eaeaea;
+    padding: 3px;
+    border: none;
+    border-radius: 7%;
+    position: inherit;
+    margin-bottom: auto;
+    margin-right: auto;
 }
