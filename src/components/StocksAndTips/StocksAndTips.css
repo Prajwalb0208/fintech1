@@ -1,0 +1,140 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr; /* Adjust column proportions to fit the image */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    align-items: start;
+}
+
+.container-left, .container-center {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.tips-header {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    height: 60vh; /* Ensure the carousel takes full height of container-right */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    gap: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 20px;
+    display: block;
+    block-size: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.carousel-controls button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+}
+
+.carousel-indicators button {
+    background-color: #007bff;
+    border: none;
+    width: 30px;
+    height: 4px;
+    border-radius: 10%;
+    /* margin: 0 5px; */
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: #0056b3;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.buy-new-button {
+    background-color: #eaf4fe;
+    color: #3f4f9a;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.change {
+    color: green;
+    font-weight: bold;
+}

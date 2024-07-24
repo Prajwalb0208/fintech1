@@ -1,0 +1,150 @@
+.graph-container {
+    padding: 20px 0px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 30px;
+  }
+  
+  .header h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .settings-button {
+    background-color: #e0e8f0;
+    border: none;
+    color: #7180BF;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    top: 10vh;
+    left: 8vh;
+    z-index: 1;
+    position: absolute;
+  }
+  
+  .settings-button:hover {
+    background-color: #7b8ea2;
+    color: #d5d8e6;
+  }
+  
+  .chart-container {
+    position: relative;
+    padding-bottom: 10px;
+    height: 400px;
+  }
+  
+  .prediction-text {
+    position: absolute;
+    right: 35vh;
+    bottom: 25vh;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7180BF;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .header {
+      padding-left: 20px;
+    }
+  
+    .header h2 {
+      font-size: 22px;
+    }
+  
+    .settings-button {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  
+    .prediction-text {
+      right: 30vh;
+      bottom: 20vh;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 15px;
+    }
+  
+    .header h2 {
+      font-size: 20px;
+    }
+  
+    .settings-button {
+      top: 8vh;
+      left: 6vh;
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  
+    .prediction-text {
+      right: 25vh;
+      bottom: 15vh;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding-left: 10px;
+    }
+  
+    .header h2 {
+      font-size: 18px;
+    }
+  
+    .settings-button {
+      top: 8vh;
+      left: 4vh;
+      padding: 4px 8px;
+      font-size: 10px;
+    }
+  
+    .prediction-text {
+      right: 20vh;
+      bottom: 15vh;
+      font-size: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      padding-left: 5px;
+    }
+  
+    .header h2 {
+      font-size: 16px;
+    }
+  
+    .settings-button {
+      top: 8vh;
+      left: 2vh;
+      padding: 2px 4px;
+      font-size: 8px;
+    }
+  
+    .prediction-text {
+      right: 5vh;
+      bottom: 15vh;
+      font-size: 8px;
+    }
+  }
+  
