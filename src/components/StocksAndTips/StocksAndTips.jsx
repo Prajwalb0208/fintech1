@@ -57,8 +57,8 @@ const StocksAndTips = () => {
                     {stocksData.map((stock, index) => (
                         <li key={index} className="list-group-item">
                             <span>{stock.name}</span>
-                            <span/>
-                            <span/>
+                            <span />
+                            <span />
                             <span className='price'>{stock.price}</span>
                             <span className="change">{stock.change}</span>
                         </li>
@@ -74,8 +74,8 @@ const StocksAndTips = () => {
                     {optionsData.map((option, index) => (
                         <li key={index} className="list-group-item">
                             <span>{option.name}</span>
-                            <span/>
-                            <span/>
+                            <span />
+                            <span />
                             <span className='price'>{option.price}</span>
                             <span className="change">{option.change}</span>
                         </li>
@@ -85,7 +85,7 @@ const StocksAndTips = () => {
             <div className="container-right">
                 <h3 className="tips-header">Tips</h3>
                 <div className="carousel">
-                    <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 101}%)` }}>
+                    <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {tipsData.map((tip, index) => (
                             <div key={index} className="carousel-item">
                                 <div>

@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensure equal column widths */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -14,16 +14,8 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Ensure containers fill the grid cell */
     display: flex;
     flex-direction: column;
-}
-
-.container-right {
-    /* Remove specific width setting to ensure equal sizing */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .tips-header {
@@ -37,7 +29,7 @@
 }
 
 .carousel {
-    flex: 1; /* Ensure it grows to fill the available space */
+    flex: 1;
     overflow: hidden;
     background-color: #f5f5f5;
     border-radius: 10px;
@@ -58,7 +50,7 @@
 }
 
 .carousel-item {
-    flex: 0 0 0 0 100%;
+    flex: 0 0 100%;
     min-width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -101,7 +93,7 @@
     background-color: #007bff;
     border: none;
     width: 25px !important;
-    height: 3px !important;    
+    height: 3px !important;
     border-radius: 10%;
     cursor: pointer;
     padding: 0;
@@ -155,4 +147,31 @@
     position: inherit;
     margin-bottom: auto;
     margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .tips-header {
+        font-size: 1.25rem;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carousel-item img {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
 }
